@@ -61,38 +61,32 @@ body {
 .star1, .star4{
   right: 300px;
 }
-.star2{
+.star2, .star5{
   right: 400px;
 }
-.star3{
+.star3, .star6{
   right: 200px;
 }
 .star5{
-  right: 400px;
   bottom: 190px;
 }
-.star6{
-  right: 200px;
+.star6,.star7,.star10{
   bottom: 200px;
 }
 .star7{
   left: 300px;
-  bottom:200px;
 }
-.star8{
+.star8,.star11{
   left: 400px;
   bottom: 270px;
 }
-.star9{
+.star9,.star10{
   left: 200px;
+}
+.star9{
   bottom: 280px;
 }
-.star10{
-  left: 200px;
-  bottom: 200px;
-}
 .star11{
-  left: 400px;
   bottom:250px;
 }
 .base{
