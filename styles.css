@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(rgb(0, 0, 56) 60%,green 0%);
+  background-repeat: no-repeat;
+}
+.scene {
+  position: relative;
+  width: 100px;
+  height: 400px;
+}
+.moon {
+  position: absolute;
+  bottom: 500px;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  background-color: #f5f3ce; /* Light yellow for the moon */
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.star {
+  --star-color:white;
+  margin:1em auto;
+  position: relative;
+  width: 0px;
+  height: 0px;
+  border-right: 1em solid transparent;
+  border-bottom: 0.7em solid var(--star-color);
+  border-left: 1em solid transparent;
+  transform: rotate(35deg);
+}
+.star:before {
+  border-bottom: 0.8em solid var(--star-color);
+  border-left: 0.3em solid transparent;
+  border-right: 0.3em solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -0.45em;
+  left: -0.65em;
+  content:"";
+  transform: rotate(-35deg);
+}
+.star:after {
+  position: absolute;
+  top: 0.03em;
+  left: -1.05em;
+  width: 0;
+  height: 0;
+  border-right: 1em solid transparent;
+  border-bottom: 0.7em solid var(--star-color);
+  border-left: 1em solid transparent;
+  transform: rotate(-70deg);
+  content:"";
+}
+.star1, .star4{
+  right: 300px;
+}
+.star2{
+  right: 400px;
+}
+.star3{
+  right: 200px;
+}
+.star5{
+  right: 400px;
+  bottom: 190px;
+}
+.star6{
+  right: 200px;
+  bottom: 200px;
+}
+.star7{
+  left: 300px;
+  bottom:200px;
+}
+.star8{
+  left: 400px;
+  bottom: 270px;
+}
+.star9{
+  left: 200px;
+  bottom: 280px;
+}
+.star10{
+  left: 200px;
+  bottom: 200px;
+}
+.star11{
+  left: 400px;
+  bottom:250px;
+}
+.base{
+  position: relative;
+  background-color: white;
+  border:5px solid black;
+  height: 150px;
+  width: 150px;
+  top:50px;
+  right:10px;
+}
+.target{
+  position: relative;
+  height: 120px;
+  width: 120px;
+  background-color: white;
+  border:5px solid black;
+  border-radius: 50%;
+  bottom:100px;
+  left:5px;
+}
+.rocket {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 40px;
+  height: 80px;
+  background-color: red;
+  border-radius: 20px 20px 0 0;
+  transform: translateX(-50%);
+  transition: bottom 2s ease;
+}
+.rockethead{
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 70px solid red;
+  position: relative;
+  bottom: 59px;
+}
+.rocketwindow{
+  height: 40px;
+  width: 40px;
+  border: 10px solid ;
+  background-color:green;
+  border-radius: 50%;
+  position: relative;
+  bottom: 150px;
+  left:10px;
+}
+.rocketbody{
+  height: 100px;
+  width: 80px;
+  background-color: purple;
+  position: relative;
+  bottom: 59px;
+}
+.wing{
+  position: relative;
+  background-color: darkgray;
+  transform: skew(30deg);
+}
+.w1{
+  width: 60px;
+  height: 40px;
+  rotate: 90deg;
+  bottom: 160px;
+  right: 50px;
+}
+.w2{
+  width: 44px;
+  height: 55px;
+  bottom: 209px;
+  left:77px;
+  rotate: 30deg;
+}
+.thruster{
+  border-bottom: 30px solid #555;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	height: 0;
+	width: 20px;
+  position: relative;
+}
+.t1{
+  bottom:214px;
+  right:10px;
+}
+.t2{
+  bottom:244px;
+  left:49px;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked ~ .scene .rocket {
+  bottom: 370px;
+}
+label {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  top:110px;
+  left:20px;
+}
